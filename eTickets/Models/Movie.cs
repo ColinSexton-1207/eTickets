@@ -1,25 +1,33 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 using eTickets.Data;
 
 namespace eTickets.Models {
     public class Movie {
         [Key]
-        public int movieId { get; set; }
+        public int MovieId { get; set; }
 
-        public string movieName { get; set; }
-        public string movieDescription { get; set; }
-        public double price { get; set; }
-        public string posterUrl { get; set; }
-        public DateTime startDate { get; set; }
-        public DateTime endDate { get; set; }
-        public MovieCategory movieCategory { get; set; }
+        public string MovieName { get; set; }
+        public string MovieDescription { get; set; }
+        public double Price { get; set; }
+        public string PosterUrl { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public MovieCategory MovieCategory { get; set; }
 
-        // Relationships
-        public List<ActorMovie> actorsMovies { get; set; }
+        /* --- Map DB Relationships --- */
+        public List<ActorMovie> ActorsMovies { get; set; }
+
+        /* --- Cinema --- */
+        public int CinemaId { get; set; }
+
+        [ForeignKey(nameof(CinemaId))]
+        public Cinema Cinema { get; set; }
+
+        /* --- Producer --- */
+        public int ProducerId { get; set; }
+        [ForeignKey("ProducerId")]
+        public Producer Producer { get; set; }
     }
 }

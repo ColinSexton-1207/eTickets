@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 using Microsoft.EntityFrameworkCore;
+
+using eTickets.Models;
 
 namespace eTickets.Data {
     // Translator between Models and DB
@@ -15,12 +12,12 @@ namespace eTickets.Data {
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
             modelBuilder.Entity<ActorMovie>().HasKey(am => new {
-                am.actorId,
-                am.movieId
+                am.ActorId,
+                am.MovieId
             });
 
-            modelBuilder.Entity<ActorMovie>().HasOne(m => m.Actor).WithMany(am => am.actorsMovies).HasForeignKey(m => m.actorId);
-            modelBuilder.Entity<ActorMovie>().HasOne(m => m.Movie).WithMany(am => am.actorsMovies).HasForeignKey(m => m.movieId);
+            modelBuilder.Entity<ActorMovie>().HasOne(m => m.Actor).WithMany(am => am.ActorsMovies).HasForeignKey(m => m.ActorId);
+            modelBuilder.Entity<ActorMovie>().HasOne(m => m.Movie).WithMany(am => am.ActorsMovies).HasForeignKey(m => m.MovieId);
 
             base.OnModelCreating(modelBuilder);
         }

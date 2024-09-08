@@ -1,14 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace eTickets.Models {
     public class Cinema {
         [Key]
-        public int cinemaId { get; set; }
-        public string logo { get; set; }
-        public string cinemaName { get; set; }
-        public string description { get; set; }
+        public int CinemaId { get; set; }
+        
+        public string Logo { get; set; }
+        public string CinemaName { get; set; }
+        public string Description { get; set; }
+
+        /* --- Map DB Relationships --- */
+        public List<Movie> Movies { get; set; }
     }
 }

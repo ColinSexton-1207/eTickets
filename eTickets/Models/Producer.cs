@@ -1,16 +1,15 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace eTickets.Models {
     public class Producer {
         [Key]
-        public int producerId { get; set; }
+        public int ProducerId { get; set; }
         
-        public string profilePictureUrl { get; set; }
-        public string fullName { get; set; }
-        public string bio { get; set; }
+        public string ProfilePictureUrl { get; set; }
+        public string FullName { get; set; }
+        public string Bio { get; set; }
+
+        /* --- Map DB Relationships --- */
+        public List<Movie> Movies { get; set; }
     }
 }
