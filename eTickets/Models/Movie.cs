@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using eTickets.Data;
 
-namespace eTickets.Movie {
+namespace eTickets.Models {
     public class Movie {
         [Key]
         public int movieId { get; set; }
@@ -18,5 +18,8 @@ namespace eTickets.Movie {
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
         public MovieCategory movieCategory { get; set; }
+
+        // Relationships
+        public List<ActorMovie> actorsMovies { get; set; }
     }
 }
