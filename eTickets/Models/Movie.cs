@@ -8,12 +8,16 @@ namespace eTickets.Models {
         [Key]
         public int MovieId { get; set; }
 
+        [Display(Name = "Title")]
         public string MovieName { get; set; }
+        [Display(Name = "Description")]
         public string MovieDescription { get; set; }
         public double Price { get; set; }
+        [Display(Name = "Poster")]
         public string PosterUrl { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        [Display(Name = "Category")]
         public MovieCategory MovieCategory { get; set; }
 
         /* --- Map DB Relationships --- */

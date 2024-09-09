@@ -4,32 +4,55 @@
     ViewData["Title"] = "List of Movies";
 }
 
-<div class="row">
-    <div class="col-md-8 offset-md-2">
-        <table class="table">
-            <thead>
-                <tr class="text-center">
-                    <th>@Html.DisplayNameFor(model => model.PosterUrl)</th>
-                    <th>@Html.DisplayNameFor(model => model.MovieName)</th>
-                    <th>@Html.DisplayNameFor(model => model.MovieDescription)</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach(var item in Model) {
-                    <tr>
-                        <td class="align-middle">
-                            <img class="rounded-circle" src="@item.PosterUrl" alt="@item.MovieName" style="max-width:150px"/>
-                        </td>
-                        <td class="align-middle">
-                            @Html.DisplayFor(modelItem => item.MovieName)
-                        </td>
-                        <td class="align-middle">
-                            @Html.DisplayFor(modelItem => item.MovieDescription)
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+<div class="container-fluid content-row">
+    <div class="row">
+        @foreach(var item in Model) {
+            <div class="col-md-4 col-xs-6 border-primary mb-03">
+                <div class="card mb-3" style="max-width:540px;max-height:700px;">
+                    <div class="row g-0">
+                        <div class="col-md-12">
+                            <div class="card-header text-white bg-info">
+                                <p class="card-text">
+                                    <h5 class="card-title">
+                                        @item.MovieName
+                                        <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
+                                    </h5>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="@item.PosterUrl" width="100%" alt="@item.MovieName"/>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <p class="card-text">@item.MovieDescription</p>
+                                <p class="card-text"><b>Cinema: </b>@item.Cinema.CinemaName</p>
+                                <p class="card-text"><b>Category: </b>@item.MovieCategory</p>
+                                <p class="card-text"><b>Start Date: </b>@item.StartDate.ToString("MMM dd, yyyy")</p>
+                                <p class="card-text"><b>End Date: </b>@item.EndDate.ToString("MMM dd, yyy")</p>
+                                <p class="card-text">
+                                    <b>Status: </b>
+                                    @if(DateTime.Now >= @item.StartDate && DateTime.Now <= item.EndDate) {
+                                        <span class="badge bg-success text-white">AVAILABLE</span>
+                                    } else if(DateTime.Now > item.EndDate) {
+                                        <span class="badge bg-danger text-white">EXPIRED</span>  
+                                    } else {
+                                        <span class="badge bg-primary text-white">UPCOMING</span>
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card-footer">
+                                <p class="card-text">
+                                    <a class="btn btn-outline-primary float-right"><i class="bi bi-eye-fill"></i>Show Details</a>
+                                    <a class="btn btn-success text-white"><i class="bi bi-cart-plus"></i>Add to Cart - @item.Price.ToString("c")</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>
