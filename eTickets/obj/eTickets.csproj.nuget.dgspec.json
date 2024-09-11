@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\eTickets.csproj": {}
+    "c:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\eTickets.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\eTickets.csproj": {
+    "c:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\eTickets.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\eTickets.csproj",
+        "projectUniqueName": "c:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\eTickets.csproj",
         "projectName": "eTickets",
-        "projectPath": "C:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\eTickets.csproj",
+        "projectPath": "c:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\eTickets.csproj",
         "packagesPath": "C:\\Users\\Colin Sexton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\obj\\",
+        "outputPath": "c:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Colin Sexton\\AppData\\Roaming\\NuGet\\NuGet.Config"

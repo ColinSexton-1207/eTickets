@@ -16,5 +16,9 @@ namespace eTickets.Controllers {
 
             return View("Actors", allActors);
         }
+
+        public async Task<IActionResult> Create(/*Actor actor*/) {
+            return View();
+        }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IOdoIbb/p2g=",
+  "dgSpecHash": "AJanmsNrLHY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\eTickets.csproj",
+  "projectFilePath": "c:\\Users\\Colin Sexton\\Desktop\\.Net 8 Core\\eTickets\\eTickets\\eTickets.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Colin Sexton\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Colin Sexton\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
